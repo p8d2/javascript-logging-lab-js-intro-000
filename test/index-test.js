@@ -22,7 +22,7 @@ console.error("HALP!")
 
   it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
-
+console.log("Logging")
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
@@ -44,3 +44,4 @@ console.error("HALP!")
     })
   })
 })
+console.warn("warnings")
